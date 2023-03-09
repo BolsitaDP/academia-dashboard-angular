@@ -1,0 +1,67 @@
+<mat-toolbar>
+  <button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+  <span>My App</span>
+  <span class="example-spacer"></span>
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav
+    #sidenav="matSidenav"
+    mode="side"
+    opened
+    class="mat-elevation-z8"
+  >
+    <img
+      src="https://store-images.s-microsoft.com/image/apps.59391.13977311502771693.72aef738-75a3-4db8-97c9-280f3b8c4daa.8093df13-7a33-46ad-96de-cedfacb8f364?q=90&w=480&h=270"
+      alt="avatar"
+      class="avatar mat-elevation-z8"
+      width="100px"
+      height="100px"
+    />
+    <h4 class="name">Admin</h4>
+    <p class="designation">Admin user</p>
+
+    <mat-divider></mat-divider>
+
+    <mat-list role="list">
+      <mat-list-item role="listitem"
+        ><button mat-button class="menu-button">
+          <mat-icon>person</mat-icon>
+          <span><a [routerLink]="['student/studentCreate']">Crear</a></span>
+        </button></mat-list-item
+      >
+      <mat-list-item role="listitem"
+        ><button mat-button class="menu-button">
+          <mat-icon>person</mat-icon>
+          <span><a [routerLink]="['student/students']">Lista</a></span>
+        </button></mat-list-item
+      >
+      <mat-list-item role="listitem"
+        ><button mat-button class="menu-button">
+          <mat-icon>person</mat-icon>
+          <span><a [routerLink]="['student/studentCreate']">Interé</a></span>
+        </button></mat-list-item
+      >
+      <mat-divider></mat-divider>
+
+      <mat-list-item role="listitem"
+        ><button mat-button class="menu-button">
+          <mat-icon>logout</mat-icon>
+          <span>Salir</span>
+        </button></mat-list-item
+      >
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

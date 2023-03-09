@@ -1,0 +1,46 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav-content>
+    <div class="col-md-6 offset-md-3">
+      <div class="content mat-elevation-z8 justify-content-center">
+        <div class="login-form">
+          <img
+            src="https://store-images.s-microsoft.com/image/apps.59391.13977311502771693.72aef738-75a3-4db8-97c9-280f3b8c4daa.8093df13-7a33-46ad-96de-cedfacb8f364?q=90&w=480&h=270"
+            alt="avatar"
+            class="avatar logo mat-elevation-z8 mt-5"
+            width="100px"
+            height="100px"
+          />
+
+          <div class="mt-2">
+            <label class="mt-5 d-flex justify-content-center" for="email"
+              >Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form-control mt-2"
+              placeholder="johndoe@uwumail.com"
+            />
+          </div>
+          <div class="mt-2">
+            <label class="mt-5 d-flex justify-content-center" for="email"
+              >Contraseña
+            </label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="form-control mt-2"
+            />
+          </div>
+          <div class="col-md-12 d-flex mt-5 justify-content-center">
+            <button (click)="login()" class="btn btn-primary" type="button">
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
